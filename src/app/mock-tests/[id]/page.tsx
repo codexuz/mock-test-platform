@@ -371,6 +371,9 @@ function MockTestDashboard() {
                                         src={videoUrl}
                                         poster={skillPosters[skill]}
                                         controls
+                                        controlsList="nofullscreen"
+                                        disablePictureInPicture
+                                        onContextMenu={(e) => e.preventDefault()}
                                         style={{
                                           width: "100%",
                                           maxHeight: "450px",

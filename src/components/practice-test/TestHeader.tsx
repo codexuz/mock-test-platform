@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import {
   ArrowLeft,
-  Maximize2,
+//   Maximize2,
   Bell,
   Menu,
   Send,
@@ -163,6 +163,7 @@ export default function TestHeader({
               Submit
             </Button>
           )}
+{/* 
           <IconButton
             variant="ghost"
             size="sm"
@@ -173,6 +174,7 @@ export default function TestHeader({
           >
             <Maximize2 size={18} />
           </IconButton>
+          */}
           <IconButton
             variant="ghost"
             size="sm"
