@@ -66,10 +66,11 @@ export default function SummaryCompletionDragDrop({
     const targetQNum = Number(over.id);
 
     if (!isNaN(targetQNum)) {
-      // Remove from any other gap first
+      // Remove from any other gap in THIS question group only
       Object.entries(answers).forEach(([qn, val]) => {
-        if (val === droppedValue && Number(qn) !== targetQNum) {
-          onAnswer(Number(qn), "");
+        const num = Number(qn);
+        if (val === droppedValue && num !== targetQNum && ownQNums.has(num)) {
+          onAnswer(num, "");
         }
       });
       onAnswer(targetQNum, droppedValue);
